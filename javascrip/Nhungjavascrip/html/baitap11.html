@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 11</title>
+</head>
+
+<body>
+    <script>
+        let number1 = +prompt("Nhập số thứ nhất: ");
+        let number2 = +prompt("Nhập số thứ hai: ");
+        let number3 = +prompt("Nhập số thứ ba: ");
+
+        let max_number = (number1 > number2 && number1 > number3) ? number1 : ((number2 > number3) ? number2 : number3);
+        let min_number = (number1 < number2 && number1 < number3) ? number1 : ((number2 < number3) ? number2 : number3);
+
+        console.log("Số lớn nhất là: " + max_number);
+        console.log("Số nhỏ nhất là: " + min_number);
+    </script>
+</body>
+
+</html>

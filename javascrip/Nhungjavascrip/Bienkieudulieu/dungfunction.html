@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+              function getNumberOfTheDays(month, year) {
+        const day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        // Xử lí trường hợp năm nhuận hay không (năm chia hết cho 4 và không chia hết cho 100 hoặc là chia hết cho 400)
+        if (
+          month === 2 &&
+          ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)
+        ) {
+          return 29; // Tháng 2 năm nhuận có 29 ngày
+        }
+
+        return day[month - 1]; // trả về số ngày của tháng
+      }
+
+      // Lấy thông tin của người dùng
+      const month = parseInt(prompt("Nhap so thang (1 - 12)"));
+      const year = parseInt(prompt("Nhap so nam"));
+
+      // Gọi hàm ra (callback) và in ra số ngày của tháng đó
+      const numberOfDay = getNumberOfTheDays(month, year);
+      console.log(`So ngay cua thang ${month}/${year} la: ${numberOfDay}`);
+    </script>
+  </body>
+</html>
